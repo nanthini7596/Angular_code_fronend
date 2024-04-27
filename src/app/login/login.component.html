@@ -1,0 +1,60 @@
+<!-- <div class="container py-3">
+    <div class="row">
+      <div class="col-md-12"> 
+ 
+        <hr class="mb-4">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <span class="anchor" id="formLogin"></span> 
+            <div class="card card-outline-secondary">
+              <div class="card-header">
+                <h3 class="mb-0">Login</h3>
+              </div>
+              <div class="card-body">
+                <form autocomplete="off" class="form" id="formLogin" name="formLogin" role="form">
+                  <div class="form-group">
+                    <label for="uname1">Username</label> 
+										<input class="form-control" id="uname1" name="uname1" required="" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label> 
+										<input autocomplete="new-password" class="form-control" id="pwd1" required="" type="password">
+                  </div>
+                  <div class="form-check small">
+                    <label class="form-check-label">
+											<input class="form-check-input" type="checkbox"> 
+											<span>Remember me on this computer</span>
+                    </label>
+                  </div>
+									<button class="btn btn-success btn-lg float-right" type="button">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+    </div>
+  </div>
+ -->
+
+<div class="form-container">
+    <div class="form-layout">
+        <div class="form-content">
+            <h3 class>Login</h3> <hr/>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="userName" class="spacing">User Name</label>
+                    <input type="text" formControlName="userName" class="form-control mb-3" id="userName" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="spacing">Password</label>
+                    <input type="password" formControlName="password" class="form-control mb-3" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                <hr/>
+                <button type="button" class="btn btn-link" (click)="goToSignup()">Signup</button>
+                <button type="button" class="btn btn-link" (click)="resetPassword()">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</div>
